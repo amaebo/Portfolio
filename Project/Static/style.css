@@ -5,6 +5,9 @@
     box-sizing: border-box;
     
 }
+html {
+  font-size: 16px; /* Now 1rem = 16px */
+}
 
 /* Make sure the body takes full height of the viewport */
 body {
@@ -23,15 +26,23 @@ main {
 }
 
 /* Navigation Styles */
-nav ul {
-    background: rgba(255,255,255,0.15);
+nav {
+    background: rgba(231, 231, 231, 0.4);
     border-radius: 30px;
     padding: 12px 40px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    /* box-shadow: 0 4px 16px rgba(0,0,0,0.07); */
     margin: 0 auto;
     display: inline-block;
 }
 
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
 nav ul li {
     display: inline;
 }
@@ -39,10 +50,16 @@ nav ul li {
 nav ul li a {
     color: #ff0000;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: background 0.2s;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    background: rgba(255,255,255,0.25);
 }
 
 header {
@@ -73,6 +90,12 @@ header {
     display: flex;  /* Use flexbox to arrange children side by side */
     align-items: center;  /* Vertically align items */
     justify-content: space-between;  /* Space out the text and image */
+}
+
+.introduction p{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .intro-text {
