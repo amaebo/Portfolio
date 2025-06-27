@@ -6,9 +6,13 @@
     
 }
 html {
-  font-size: 16px; /* Now 1rem = 16px */
+  font-size: 20px; /* Now 1rem = 16px */
 }
 
+main {
+  flex-grow: 1;
+  padding: 200px; /* Reduce from 20px if you want less space around main content */
+}
 /* Make sure the body takes full height of the viewport */
 body {
     min-height: 100vh;
@@ -48,9 +52,8 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ff0000;
+    color: #F6F6F6;
     text-decoration: none;
-    font-weight: 600;
     font-size: 1.1rem;
     padding: 6px 14px;
     border-radius: 20px;
@@ -70,6 +73,61 @@ header {
     background: none;
 }
 
+/* Hero Section Styling */
+.hero {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3. Two-column Layout */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 900px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* 4. Text Section */
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem; /* ~40px */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem; /* Reduced from 1rem */
+  padding-bottom: 0;
+}
+
+.hero-text .highlight {
+  color: #b6c7ff;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.125rem; /* ~18px */
+  max-width: 45ch;
+  line-height: 1.7;
+}
+
+/* 5. Image/Card */
+.hero-img {
+  max-height: 260px;
+  width: auto;
+  padding: 8px;
+  margin: 0 auto;
+}
 /* Project box styles */
 .project-box {
     margin-bottom: 20px;
@@ -86,27 +144,6 @@ header {
     margin-bottom: 10px;
 }
 
-.introduction {
-    display: flex;  /* Use flexbox to arrange children side by side */
-    align-items: center;  /* Vertically align items */
-    justify-content: space-between;  /* Space out the text and image */
-}
-
-.introduction p{
-    font-size: 1.5rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.intro-text {
-    flex: 1;  /* Allow the text to take up remaining space */
-    padding-right: 20px;  /* Add space between the text and image */
-}
-
-.portfolio-img {
-    width: 300px;
-    height: auto;
-}
 
 footer {
     color: white;
