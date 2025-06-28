@@ -7,18 +7,41 @@
 }
 
 html {
-  font-size: 115%;
+  font-size: 130%;
 }
 
 @font-face {
-  font-family: 'Stara',sans-serif;
+  font-family: 'Stara';
   src: url('../Static/fonts/Stara-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Stara';
+  src: url('../Static/fonts/Stara-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stara';
+  src: url('../Static/fonts/Stara-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stara';
+  src: url('../Static/fonts/Stara-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Stara';
+  src: url('../Static/fonts/Stara-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
 main {
   flex-grow: 1;
-  padding: 200px; /* Reduce from 20px if you want less space around main content */
 }
 /* Make sure the body takes full height of the viewport */
 body {
@@ -37,7 +60,7 @@ body {
 /* Main content should take the remaining space */
 main {
     flex-grow: 1;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Navigation Styles */
@@ -96,7 +119,7 @@ header {
   display: flex;
   align-items: center;
   gap: 4rem;
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -127,13 +150,19 @@ header {
 
 .hero-text p {
   font-size: 1.125rem; /* ~18px */
-  max-width: 45ch;
+  max-width: 100ch;
   line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .hero-text p {
+    max-width: 90vw;
+  }
 }
 
 /* 5. Image/Card */
 .hero-img {
-  max-height: 260px;
+  max-height: 370px;
   width: auto;
   padding: 8px;
   margin: 0 auto;
