@@ -5,18 +5,17 @@
     box-sizing: border-box;
     
 }
-@font-face {
-    font-family: 'Stara', sans-serif;
-    src: url('../Static/fonts/Stara-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
 
 html {
   font-size: 115%;
 }
 
-
+@font-face {
+  font-family: 'Stara',sans-serif;
+  src: url('../Static/fonts/Stara-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
 main {
   flex-grow: 1;
   padding: 200px; /* Reduce from 20px if you want less space around main content */
