@@ -5,9 +5,17 @@
     box-sizing: border-box;
     
 }
-html {
-  font-size: 20px; /* Now 1rem = 16px */
+@font-face {
+    font-family: 'Stara', sans-serif;
+    src: url('../Static/fonts/Stara-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
+
+html {
+  font-size: 115%;
+}
+
 
 main {
   flex-grow: 1;
@@ -15,6 +23,10 @@ main {
 }
 /* Make sure the body takes full height of the viewport */
 body {
+    font-family: 'Stara', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -61,7 +73,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
     background: rgba(255,255,255,0.25);
 }
 
