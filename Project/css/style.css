@@ -41,12 +41,16 @@
 
 /* Make sure the body takes full height of the viewport */
 body {
+    /* adding font */
     font-family: 'Stara', sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 1.5rem; /* ~24px */
-    
+    font-size: 1.75rem; /* ~24px */
+    /* sizing */
     min-height: 100vh;
+    max-width: 1200px;
+    margin-left: auto; 
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(#636DB5, #2B304F);
@@ -58,7 +62,7 @@ body {
 main {
   flex-grow: 1;
   padding: 30px;
-  margin-top: 90px; /* Add this line */
+  margin-top: 60px;
 }
 
 /* Navigation + Header Styling */
@@ -150,6 +154,7 @@ nav .nav-social a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 2rem;
 }
 
 /* 3. Two-column Layout */
