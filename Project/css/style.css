@@ -6,9 +6,7 @@
     
 }
 
-html {
-  font-size: 130%;
-}
+
 
 @font-face {
   font-family: 'Stara';
@@ -40,14 +38,13 @@ html {
   font-weight: 700;
   font-style: italic;
 }
-main {
-  flex-grow: 1;
-}
+
 /* Make sure the body takes full height of the viewport */
 body {
     font-family: 'Stara', sans-serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 1.5rem; /* ~24px */
     
     min-height: 100vh;
     display: flex;
@@ -63,50 +60,78 @@ main {
     padding: 30px;
 }
 
-/* Navigation Styles */
+/* Navigation + Header Styling */
 nav {
-    background: rgba(231, 231, 231, 0.4);
-    border-radius: 30px;
-    padding: 12px 40px;
-    /* box-shadow: 0 4px 16px rgba(0,0,0,0.07); */
-    margin: 0 auto;
-    display: inline-block;
+  background: rgba(231, 231, 231, 0.4);
+  border-radius: 30px;
+  width: 60vw;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem auto;
+  box-sizing: border-box;
 }
 
+/* Navigation list styles */
 nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
+/* Navigation link styles */
 nav ul li a {
-    color: #F6F6F6;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 6px 14px;
-    border-radius: 20px;
-    transition: background 0.2s;
+  display: block;
+  color: #F6F6F6;
+  background: none;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background 0.2s;
 }
 
+/* Navigation link hover effect */
 nav ul li a:hover {
-    background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.25);
 }
 
-header {
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0 20px 0;
-    background: none;
+/* Social icon link styles */
+nav .nav-social {
+  display: flex;
+  margin-right: 1rem;
+  gap: .5rem;
 }
 
-/* Hero Section Styling */
+nav .nav-social a {
+  text-decoration: none;
+}
+
+/* Social icon SVG color */
+.nav-social a svg {
+  color: #F6F6F6;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  transition: fill 0.2s;
+}
+
+/* Logo styling */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  margin: 0 1.5rem;
+}
+.nav-logo img {
+  height: 2em;
+  width: auto;
+  display: block;
+}
+
+/* --------Hero Section Styling----- */
 .hero {
   min-height: 10vh;
   display: flex;
@@ -131,13 +156,11 @@ header {
 }
 
 .hero-text h1 {
-  font-size: 2.5rem; /* ~40px */
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .hero-text h2 {
-  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem; /* Reduced from 1rem */
   padding-bottom: 0;
@@ -149,7 +172,6 @@ header {
 }
 
 .hero-text p {
-  font-size: 1.125rem; /* ~18px */
   max-width: 100ch;
   line-height: 1.7;
 }
