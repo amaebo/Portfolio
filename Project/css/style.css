@@ -56,21 +56,34 @@ body {
 
 /* Main content should take the remaining space */
 main {
-    flex-grow: 1;
-    padding: 30px;
+  flex-grow: 1;
+  padding: 30px;
+  margin-top: 90px; /* Add this line */
 }
 
 /* Navigation + Header Styling */
 nav {
+  /* scrolling functionality */
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  /* sizing & spacing */
+  width: 60vw;
+  margin: 0 auto;
   background: rgba(231, 231, 231, 0.4);
   border-radius: 30px;
-  width: 60vw;
   padding: 0.25rem;
+  /* flexbox for layout */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem auto;
-  box-sizing: border-box;
+
+  /* effects */
+  backdrop-filter: blur(5px);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+
+
 }
 
 /* Navigation list styles */
