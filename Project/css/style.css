@@ -6,8 +6,6 @@
     
 }
 
-
-
 @font-face {
   font-family: 'Stara';
   src: url('../Static/fonts/Stara-Medium.ttf') format('truetype');
@@ -45,34 +43,38 @@ body {
     font-family: 'Stara', sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 1.75rem; /* ~24px */
+    font-size: 1.5rem; /* ~24px */
     /* sizing */
     min-height: 100vh;
     max-width: 1200px;
+    width: 90vw;
     margin-left: auto; 
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(#636DB5, #2B304F);
+    background-image: linear-gradient(#636DB5, #1c1f36);
     color: #F6F6F6;
+}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Stara', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 /* Main content should take the remaining space */
 main {
   flex-grow: 1;
-  padding: 30px;
-  margin-top: 60px;
 }
 
-/* Navigation + Header Styling */
+/* ------------Navigation Styling --------------------*/
 nav {
   /* scrolling functionality */
   position: sticky;
   top: 20px;
   z-index: 1000;
   /* sizing & spacing */
-  width: 60vw;
+  width: 100%;
   margin: 0 auto;
   background: rgba(231, 231, 231, 0.4);
   border-radius: 30px;
@@ -150,61 +152,52 @@ nav .nav-social a {
 
 /* --------Hero Section Styling----- */
 .hero {
-  min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
 }
 
-/* 3. Two-column Layout */
+/* Two-column Layout */
 .hero-content {
   display: flex;
   align-items: center;
-  gap: 4rem;
-  max-width: 1200px;
+  justify-content: center; /* Add this to center children horizontally */
+  gap: 2rem;
   width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: wrap;;
 }
 
 /* 4. Text Section */
 .hero-text {
   flex: 1;
-  min-width: 280px;
 }
 
 .hero-text h1 {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 2em;
 }
 
 .hero-text h2 {
-  font-weight: 600;
-  margin-bottom: 0.5rem; /* Reduced from 1rem */
-  padding-bottom: 0;
+  font-weight: 700;
+  font-size: 2em;
 }
 
 .hero-text .highlight {
-  color: #b6c7ff;
+  background: linear-gradient(90deg, #cdbafb, #74c6f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   font-weight: 700;
-}
-
-.hero-text p {
-  max-width: 100ch;
-  line-height: 1.7;
-}
-
-@media (max-width: 768px) {
-  .hero-text p {
-    max-width: 90vw;
-  }
+  
 }
 
 /* 5. Image/Card */
 .hero-img {
   max-height: 370px;
   width: auto;
-  padding: 8px;
   margin: 0 auto;
 }
 /* Project box styles */
