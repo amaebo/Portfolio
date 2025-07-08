@@ -54,8 +54,6 @@ body {
     width: 90vw;
     margin-left: auto; 
     margin-right: auto;
-    display: flex;
-    flex-direction: column;
     background-image: linear-gradient(#636DB5, #1c1f36);
     color: #F6F6F6;
 }
@@ -72,7 +70,7 @@ main {
 }
 
 /* ------------Navigation Styling --------------------*/
-nav {
+.main-nav {
   /* scrolling functionality */
   position: sticky;
   top: 20px;
@@ -90,24 +88,24 @@ nav {
 
   /* effects */
   backdrop-filter: blur(5px);
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
-
-
 }
 
 /* Navigation list styles */
-nav ul {
+.main-nav .nav-links ul{
   display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
   list-style: none;
+  align-items: center;
+  justify-content: center; /* Center the links horizontally */
+  gap: 20px;               /* Space between links */
+  padding: 0;
+  margin: 0;
 }
 
+.main-nav .nav-links li {
+  display: inline-block;   /* Make sure list items are inline */
+}
 /* Navigation link styles */
-nav ul li a {
-  display: block;
+.nav-links li a{
   color: #F6F6F6;
   background: none;
   text-decoration: none;
@@ -118,12 +116,12 @@ nav ul li a {
 }
 
 /* Navigation link hover effect */
-nav ul li a:hover {
+.nav-links li a:hover {
   background: rgba(255,255,255,0.25);
 }
 
 /* Social icon link styles */
-nav .nav-social {
+.nav-social {
   display: flex;
   margin-right: 1rem;
   gap: .5rem;
@@ -131,8 +129,14 @@ nav .nav-social {
 }
 
 /* Social icon SVG color */
-.nav-social a svg {
+.nav-social a {
   color: #F6F6F6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-social svg {
+  fill: #F6F6F6;
   width: 1em;
   height: 1em;
   vertical-align: middle;
@@ -152,25 +156,48 @@ nav .nav-social {
 }
 
 /* Navigation toggle button for mobile */
-.nav-toggle { /* Show this on mobile with a media query if needed */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.nav-toggle { /* Show this on mobile with a media query if needed */ 
+  display: none; /* Hidden by default, shown on smaller screens */
   cursor: pointer;
   height: 35px;
   width: 35px;
+  margin-top: 5px;
+  margin-right: 1rem;
 }
 
 .nav-toggle .bar {
-  display: block;
-  width: 32px;
-  height: 4px;
+  display: block; /* Ensure the bars are visible */
+  width: 26px;
+  height: 3px;
   margin: 5px 0;
   background: #F6F6F6;
   border-radius: 2px;
   transition: 0.3s;
 }
+/* ------------ Mobile Nav ------------ */
+.mobile-nav {
+  display: grid;
+  grid-template-columns: 1fr;     /* ONE column */
+  grid-template-rows: auto auto;  /* TWO rows: nav links, then social icons */
 
+  gap: 1rem;
+  position: fixed;
+  top: 90px; /* Adjust based on your header height */
+  z-index: 999;
+  max-width: fit-content;
+  
+  background: rgba(231, 231, 231, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border-radius: 20px;
+  justify-self: right;  
+}
+.mobile-nav .nav-links ul {
+  list-style: none; /* Remove default list styles */
+  gap: 1rem; /* Space between links */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
 /* --------Hero Section Styling----- */
 .hero {
   display: flex;
@@ -218,9 +245,13 @@ nav .nav-social {
 
 /* 5. Image/Card */
 .hero-img {
-  max-height: 370px;
-  width: auto;
+  width: 100%;
+  max-width: 370px;   /* Maximum width */
+  min-width: 180px;   /* Minimum width */
+  height: auto;
+  display: block;
   margin: 0 auto;
+  object-fit: cover;  /* Ensures the image covers the area nicely */
 }
 /* Project box styles */
 .project-box {
@@ -243,4 +274,19 @@ footer {
     color: white;
     padding: 10px 0;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main-nav .nav-social, .main-nav .nav-links { 
+    display: none; /* Hide on mobile */
+  }
+  .nav-toggle {
+    display: block; /* Show toggle button on mobile */
+  }
+  .mobile-nav .nav-links {
+    flex-direction: column; /* Stack links vertically */
+  }
+
+
+
 }
