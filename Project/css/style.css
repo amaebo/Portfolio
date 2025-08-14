@@ -188,6 +188,10 @@ main {
   border-radius: 20px;
 }
 
+.mobile-nav.open {
+  display: grid; 
+}
+
 .mobile-nav .nav-links ul {
   list-style: none; /* Remove default list styles */
   gap: 1rem; /* Space between links */

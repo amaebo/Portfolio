@@ -4,18 +4,14 @@ const navToggle= document.getElementById('nav-toggle')
 const closeNav = document.getElementById("close-nav");
 const navitems = document.getElementsByClassName("nav-links")
 
-if (navToggle) {
+if (navToggle) { //show open nav menu
   navToggle.addEventListener('click', () => {
-    mobileNav.style.display = 'grid';
-    navToggle.style.display = 'none';
-    closeNav.style.display = 'block';
+    mobileNav.classList.add('open');
   });
-} else console.log("navToggle not found")
+}
 
-if (closeNav) {
+if (closeNav) { //close nav menu
   closeNav.addEventListener('click', () => {
-    mobileNav.style.display = 'none';
-    navToggle.style.display = 'block';
-    closeNav.style.display = 'none';
+    mobileNav.classList.remove('open');
   });
 }
