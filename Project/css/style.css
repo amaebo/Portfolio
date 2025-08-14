@@ -155,17 +155,6 @@ main {
   display: block;
 }
 
-/* Navigation toggle button for mobile */
-.nav-toggle { /* Show this on mobile with a media query if needed */ 
-  display: none; /* Hidden by default, shown on smaller screens */
-  margin: 0 1.5rem;
-}
-
-.close-nav{
-  display: none;
-  margin: 0 1.5rem;
-
-}
 
 
 /* ------------ Mobile Nav ------------ */
@@ -198,6 +187,22 @@ main {
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
 }
+/* Navigation toggle button for mobile */
+.nav-open-icon { /* Show this on mobile with a media query if needed */ 
+  display: none; /* Hidden by default, shown on smaller screens */
+  margin: 0 1.5rem;
+}
+
+.nav-close-icon{
+  display: none;
+  margin: 0 1.5rem;
+}
+
+.nav-toggle{
+  display: block;
+}
+
+
 /* --------Hero Section Styling----- */
 .hero {
   display: flex;
