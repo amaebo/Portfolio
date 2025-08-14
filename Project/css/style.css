@@ -158,25 +158,19 @@ main {
 /* Navigation toggle button for mobile */
 .nav-toggle { /* Show this on mobile with a media query if needed */ 
   display: none; /* Hidden by default, shown on smaller screens */
-  cursor: pointer;
-  height: 35px;
-  width: 35px;
-  margin-top: 5px;
-  margin-right: 1rem;
+  margin: 0 1.5rem;
 }
 
-.nav-toggle .bar {
-  display: block; /* Ensure the bars are visible */
-  width: 26px;
-  height: 3px;
-  margin: 5px 0;
-  background: #F6F6F6;
-  border-radius: 2px;
-  transition: 0.3s;
+.close-nav{
+  display: none;
+  margin: 0 1.5rem;
+
 }
+
+
 /* ------------ Mobile Nav ------------ */
 .mobile-nav {
-  display: grid;
+  display: none; 
   top:0;
   right: calc(5vw); /* Adjust based on your layout */
   grid-template-columns: 1fr;     /* ONE column */
@@ -193,6 +187,7 @@ main {
   padding: 1rem;
   border-radius: 20px;
 }
+
 .mobile-nav .nav-links ul {
   list-style: none; /* Remove default list styles */
   gap: 1rem; /* Space between links */
@@ -270,7 +265,6 @@ main {
     margin-bottom: 10px;
 }
 
-.show
 
 
 footer {
