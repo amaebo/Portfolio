@@ -198,10 +198,9 @@ main {
   margin: 0 1.5rem;
 }
 
-.nav-toggle{
-  display: block;
+.nav-open-icon, .nav-close-icon {
+  display: none;
 }
-
 
 /* --------Hero Section Styling----- */
 .hero {
@@ -275,7 +274,6 @@ main {
 }
 
 
-
 footer {
     color: white;
     padding: 10px 0;
@@ -286,13 +284,16 @@ footer {
   .main-nav .nav-social, .main-nav .nav-links { 
     display: none; /* Hide on mobile */
   }
-  .nav-toggle {
-    display: block; /* Show toggle button on mobile */
+  .nav-open-icon {
+    display: block;
   }
-  .mobile-nav .nav-links {
-    flex-direction: column; /* Stack links vertically */
+  .nav-close-icon {
+    display: block;
   }
-
-
-
+  .nav-close-icon.hidden {
+    display: none !important;
+  }
+  .nav-open-icon.hidden {
+    display: none !important;
+  }
 }
