@@ -47,7 +47,7 @@ body {
     font-family: 'Stara', sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 1.5rem; /* ~24px */
+    font-size: 1.4rem; /* ~24px */
     /* sizing */
     min-height: 100vh;
     max-width: 1200px;
@@ -258,28 +258,51 @@ main {
   object-fit: cover;  /* Ensures the image covers the area nicely */
 }
 
+/*-------- About me ---------- */
+
+.about-me-txt{
+  margin-bottom: 3.5rem;
+}
 /* -------- Projects Styling ----------- */
 .project-box {
-    display: flex;
-    flex-wrap: wrap; /* makes it responsive */
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 19px;
-    background-color: rgba(231, 231, 231, 0.4); /* White with 50% transparency */
+  display: flex;
+  gap: 2.5rem;
+  background: rgba(231, 231, 231, 0.25); /* Soft glassy background */
+  border-radius: 32px;
+  box-shadow: 0 4px 32px rgba(44, 44, 80, 0.12);
+  padding: 1.5rem 1.5rem;
+  margin-bottom: 2.5rem;
+  transition: box-shadow 0.2s;
 }
 
-.project-box h3 {
-    margin-bottom: 10px;
+.project-box:hover {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.40);
 }
 
-.project-image{
-  flex: 1 1 auto;
-
+.project-image img {
+  width: 360px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px rgba(44,44,80,0.10);
+  object-fit: cover;
+  display: block;
 }
-.project-info{
-  flex: 1 1 auto;
 
+.project-info {
+  flex: 1;
+  padding-left: 2rem;
+  color: #fff;
 }
+
+
+.project-info p {
+  font-size: 1.12rem;
+  margin-bottom: 1rem;
+  color: #eaeaea;
+}
+
+/* Responsive for mobile */
+
 
 footer {
     color: white;
@@ -287,6 +310,9 @@ footer {
     text-align: center;
 }
 
+@media (min-width: 600px) {
+  
+}
 @media (max-width: 768px) {
   .main-nav .nav-social, .main-nav .nav-links { 
     display: none; /* Hide on mobile */
@@ -303,4 +329,31 @@ footer {
   .nav-open-icon.hidden {
     display: none !important;
   }
+  /*project boxes*/
+  .project-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+  .project-image img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .project-info {
+    padding-left: 0;
+  }
+}
+@media (min-width: 1025px) {
+  .nav-open-icon {
+    display: none !important;
+  }
+  .nav-close-icon {
+    display: none !important;
+  }
+  .mobile-nav{
+    display: none !important;
+  }
+
 }
