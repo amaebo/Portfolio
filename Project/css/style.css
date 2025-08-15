@@ -257,22 +257,29 @@ main {
   margin: 0 auto;
   object-fit: cover;  /* Ensures the image covers the area nicely */
 }
-/* Project box styles */
+
+/* -------- Projects Styling ----------- */
 .project-box {
+    display: flex;
+    flex-wrap: wrap; /* makes it responsive */
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 19px;
     background-color: rgba(231, 231, 231, 0.4); /* White with 50% transparency */
 }
 
-.project-box td {
-    padding: 16px;
-    vertical-align: top;
-}
 .project-box h3 {
     margin-bottom: 10px;
 }
 
+.project-image{
+  flex: 1 1 auto;
+
+}
+.project-info{
+  flex: 1 1 auto;
+
+}
 
 footer {
     color: white;
