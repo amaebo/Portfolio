@@ -266,7 +266,7 @@ main {
 /* -------- Projects Styling ----------- */
 .project-box {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   background: rgba(231, 231, 231, 0.25); /* Soft glassy background */
   border-radius: 32px;
   box-shadow: 0 4px 32px rgba(44, 44, 80, 0.12);
@@ -290,7 +290,6 @@ main {
 
 .project-info {
   flex: 1;
-  padding-left: 2rem;
   color: #fff;
 }
 
