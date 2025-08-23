@@ -305,6 +305,54 @@ main {
 /* Contact */
 
 
+#contact h1{
+  margin-bottom: 2rem;
+}
+.contact-container{
+  padding: 2rem;
+  background-color: rgba(231, 231, 231, 0.25);
+  border-radius: 20px;
+  width: 90%;
+  margin: 0 auto 3rem auto;
+
+}
+.contact-container a{
+  color: #62daff;
+}
+.contact-container a:hover{
+  color:#4da2bc
+}
+
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  margin-top: 2rem;
+  /* center */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact-input{
+  background-color: rgb(242, 242, 248);
+  border: none;
+  padding: .25rem;
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+
+.contact-form img{
+  height: 30px;
+}
+.contact-form button{
+  width: 8rem;
+  color: #F6F6F6;
+  border: none;
+  background-color: rgb(99 109 181);
+  border-radius: 20px;
+  padding: .25rem;
+}
 
 footer {
     color: white;
