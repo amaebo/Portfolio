@@ -21,7 +21,7 @@
 
         <div class="nav-links" id="nav-links">
           <ul>
-            <li><a href=".">Home</a></li>
+            <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -52,7 +52,7 @@
       <div class="mobile-nav" id="mobile-nav"> 
         <div class="nav-links" id="nav-links">
           <ul>
-            <li><a href=".">Home</a></li>
+            <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -74,7 +74,7 @@
 <!-- Main Content -->
   <main>
     <!-- Introduction -->
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero-content">
           <div class="hero-text">
             <h1>Hello!</h1>
@@ -101,23 +101,23 @@
         <p>Outside of tech, I’m a Denver native who enjoys reading, journaling, and spending quality time with family. I value curiosity, reflection, and continuous growth.</p>
       </div>
       
-      <div class="container text-center mt-1"> <!--Made with bootsrap-->
-        <div class="row">
-          <div class="col">
-            <h2>Education</h2>
-            <p>University of Colorado Denver</p>
-            <p><strong>B.A Computer Science</strong></p>
-            <p>Aug 2021 - May 2025</p>
-            <p>GPA 3.91</p>
-          </div>
-          <div class="col">
-            <h2>Technical Skills</h2>
-            <p><strong>Languages:</strong> Python, C++, JavaScript, HTML, PHP</p>
-            <p><strong>Frameworks:</strong> Bootstrap, Flask</p>
-            <p><strong>Tools and Databases:</strong> Node.js, MongoDB, MySQL</p>
-          </div>
-        </div>
-      </div>
+      <div class="container text-center mt-1">
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <h2>Education</h2>
+      <p>University of Colorado Denver</p>
+      <p><strong>B.A Computer Science</strong></p>
+      <p>Aug 2021 - May 2025</p>
+      <p>GPA 3.91</p>
+    </div>
+    <div class="col-md-6 mb-4">
+      <h2>Technical Skills</h2>
+      <p><strong>Languages:</strong> Python, C++, JavaScript, HTML, PHP</p>
+      <p><strong>Frameworks:</strong> Bootstrap, Flask</p>
+      <p><strong>Tools and Databases:</strong> Node.js, MongoDB, MySQL</p>
+    </div>
+  </div>
+</div>
     </section>
 
     <section id="projects">
@@ -131,7 +131,12 @@
         <div class="project-info">
           <h3>MyMealPlanner</h3>
               <p>An intuitive meal-planning application that helps users organize their daily meals and maintain a healthy lifestyle. It enables users to plan meals, save recipes, and track nutritional information, simplifying the meal preparation process.</p>
-              <p><strong>Technologies Used:</strong> HTML, PHP, MySQL, CSS</p>
+              <ul class="technologies-list">
+                <li>HTML</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>CSS</li>
+              </ul>
         </div>
       </div>
       <div class="project-box">
@@ -142,7 +147,13 @@
         <div class="project-info">
           <h3>UConnect</h3>
               <p> A web application designed for college students to discover and attend events happening across various campuses. uConnect allows users to view and manage event details, connect with students from other schools, and foster collaboration between campuses. With secure user authentication and an intuitive design, the platform enhances student engagement by providing a centralized hub for inter-campus activities.</p>
-              <p><strong>Technologies Used:</strong> JavaScript, HTML, Bootstrap5, Node.js, MongoDB</p>
+              <ul class="technologies-list">
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+              </ul>
         </div>
       </div>
     </section>

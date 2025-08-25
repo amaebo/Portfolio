@@ -290,14 +290,28 @@ main {
 
 .project-info {
   flex: 1;
-  color: #fff;
-}
-
-
-.project-info p {
+  color: #eaeaea;
   font-size: 1.12rem;
   margin-bottom: 1rem;
   color: #eaeaea;
+}
+
+
+.technologies-list {
+  padding: 0;     /* Bootstrap sets padding-left; override it */
+  margin: 0;           /* optional: also neutralize default margin */
+  list-style: none;    /* remove bullets at the UL level */
+}
+
+.technologies-list li{
+  display: inline-block;
+  list-style: none;
+  padding: 0.2rem;
+  margin: .2rem;
+  border: 2px solid #c4aaff;
+  border-radius: 10px;
+  color: #c4aaff;
+  
 }
 
 /* Responsive for mobile */
@@ -365,7 +379,7 @@ footer {
   .hero-content p, #about p, .contact-container p, footer{
     font-size: 1.2rem;
   }
-  .project-info p {
+  .project-info {
   font-size: 1rem;
 }
   /* Hero Formatting */
