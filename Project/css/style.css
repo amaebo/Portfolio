@@ -47,7 +47,7 @@ body {
     font-family: 'Stara', sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 1.4rem; /* ~24px */
+    font-size: 1.35rem; /* ~24px */
     /* sizing */
     min-height: 100vh;
     max-width: 1200px;
@@ -360,7 +360,34 @@ footer {
     text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 375px) {
+  /* set text size for  */
+  .hero-content p, #about p, .contact-container p, footer{
+    font-size: 1.2rem;
+  }
+  .project-info p {
+  font-size: 1rem;
+}
+  /* Hero Formatting */
+  .hero-content{
+    display: block;
+  }
+  .hero-text {
+  flex: 1;
+  min-width: auto; /* Ensures text section is not too narrow */
+}
+  
+  .hero-text h1 {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.hero-text h2 {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+/* Reset project info */
+
   
 }
 @media (max-width: 768px) {
