@@ -1,9 +1,9 @@
 /* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
 @font-face {
@@ -12,24 +12,28 @@
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Stara';
   src: url('../Static/fonts/Stara-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Stara';
   src: url('../Static/fonts/Stara-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Stara';
   src: url('../Static/fonts/Stara-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Stara';
   src: url('../Static/fonts/Stara-BoldItalic.ttf') format('truetype');
@@ -37,31 +41,38 @@
   font-style: italic;
 }
 
-html{
-  scroll-padding: 100px; /* Adjust based on your header height */
+html {
+  scroll-padding: 100px;
+  /* Adjust based on your header height */
 }
 
 /* Make sure the body takes full height of the viewport */
 body {
-    /* adding font */
-    font-family: 'Stara', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.35rem; /* ~24px */
-    /* sizing */
-    min-height: 100vh;
-    max-width: 1200px;
-    width: 90vw;
-    margin-left: auto; 
-    margin-right: auto;
-    background-image: linear-gradient(#636DB5, #1c1f36);
-    color: #F6F6F6;
+  /* adding font */
+  font-family: 'Stara', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.35rem;
+  /* ~24px */
+  /* sizing */
+  min-height: 100vh;
+  max-width: 1200px;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(#636DB5, #1c1f36);
+  color: #F6F6F6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Stara', sans-serif;
-    font-weight: 700;
-    margin-bottom: 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Stara', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 /* Main content should take the remaining space */
@@ -91,25 +102,29 @@ main {
 }
 
 /* Navigation list styles */
-.main-nav .nav-links ul{
+.main-nav .nav-links ul {
   display: flex;
   list-style: none;
   align-items: center;
-  justify-content: center; /* Center the links horizontally */
-  gap: 20px;               /* Space between links */
+  justify-content: center;
+  /* Center the links horizontally */
+  gap: 20px;
+  /* Space between links */
   padding: 0;
   margin: 0;
 }
 
 .main-nav .nav-links li {
-  display: inline-block;   /* Make sure list items are inline */
+  display: inline-block;
+  /* Make sure list items are inline */
 }
+
 /* Navigation link styles */
-.main-nav .nav-links li a{
+.main-nav .nav-links li a {
   padding: 6px 14px;
 }
 
-.nav-links li a{
+.nav-links li a {
   color: #F6F6F6;
   background: none;
   text-decoration: none;
@@ -122,7 +137,7 @@ main {
 
 /* Navigation link hover effect */
 .nav-links li a:hover {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* Social icon link styles */
@@ -154,6 +169,7 @@ main {
   align-items: center;
   margin: 0 1.5rem;
 }
+
 .nav-logo img {
   height: 2em;
   width: auto;
@@ -164,18 +180,22 @@ main {
 
 /* ------------ Mobile Nav ------------ */
 .mobile-nav {
-  display: none; 
-  top:0;
-  right: calc(5vw); /* Adjust based on your layout */
-  grid-template-columns: 1fr;     /* ONE column */
-  grid-template-rows: auto auto;  /* TWO rows: nav links, then social icons */
+  display: none;
+  top: 0;
+  right: calc(5vw);
+  /* Adjust based on your layout */
+  grid-template-columns: 1fr;
+  /* ONE column */
+  grid-template-rows: auto auto;
+  /* TWO rows: nav links, then social icons */
 
   gap: 1rem;
   position: fixed;
-  top: 90px; /* Adjust based on your header height */
+  top: 90px;
+  /* Adjust based on your header height */
   z-index: 999;
   max-width: fit-content;
-  
+
   background: rgba(231, 231, 231, 0.4);
   backdrop-filter: blur(5px);
   padding: 1rem;
@@ -183,32 +203,41 @@ main {
 }
 
 .mobile-nav.open {
-  display: flex; 
+  display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
 }
 
 .mobile-nav .nav-links ul {
-  list-style: none; /* Remove default list styles */
-  gap: 1rem; /* Space between links */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  list-style: none;
+  /* Remove default list styles */
+  gap: 1rem;
+  /* Space between links */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
 }
-.mobile-nav .nav-social{
+
+.mobile-nav .nav-social {
   padding-left: .5rem;
 }
+
 /* Navigation toggle button for mobile */
-.nav-open-icon { /* Show this on mobile with a media query if needed */ 
-  display: none; /* Hidden by default, shown on smaller screens */
+.nav-open-icon {
+  /* Show this on mobile with a media query if needed */
+  display: none;
+  /* Hidden by default, shown on smaller screens */
   margin: 0 1.5rem;
 }
 
-.nav-close-icon{
+.nav-close-icon {
   display: none;
   margin: 0 1.5rem;
 }
 
-.nav-open-icon, .nav-close-icon {
+.nav-open-icon,
+.nav-close-icon {
   display: none;
 }
 
@@ -225,7 +254,8 @@ main {
 .hero-content {
   display: flex;
   align-items: center;
-  justify-content: center; /* Add this to center children horizontally */
+  justify-content: center;
+  /* Add this to center children horizontally */
   gap: 6rem;
   width: 100%;
   flex-wrap: wrap;
@@ -234,7 +264,8 @@ main {
 /* 4. Text Section */
 .hero-text {
   flex: 1;
-  min-width: 350px; /* Ensures text section is not too narrow */
+  min-width: 350px;
+  /* Ensures text section is not too narrow */
 }
 
 .hero-text h1 {
@@ -248,36 +279,42 @@ main {
 }
 
 .hero-text .highlight {
-  background: linear-gradient(90deg, #cdbafb, #74c6f1); /* Gradient from purple to blue */
+  background: linear-gradient(90deg, #cdbafb, #74c6f1);
+  /* Gradient from purple to blue */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
   font-weight: 700;
-  
+
 }
 
 /* 5. Image/Card */
 .hero-img {
   width: 100%;
-  max-width: 370px;   /* Maximum width */
-  min-width: 180px;   /* Minimum width */
+  max-width: 370px;
+  /* Maximum width */
+  min-width: 180px;
+  /* Minimum width */
   height: auto;
   display: block;
   margin: 0 auto;
-  object-fit: cover;  /* Ensures the image covers the area nicely */
+  object-fit: cover;
+  /* Ensures the image covers the area nicely */
 }
 
 /*-------- About me ---------- */
 
-.about-me-txt{
+.about-me-txt {
   margin-bottom: 3.5rem;
 }
+
 /* -------- Projects Styling ----------- */
 .project-box {
   display: flex;
   gap: 2rem;
-  background: rgba(231, 231, 231, 0.25); /* Soft glassy background */
+  background: rgba(231, 231, 231, 0.25);
+  /* Soft glassy background */
   border-radius: 32px;
   box-shadow: 0 4px 32px rgba(44, 44, 80, 0.12);
   padding: 1.5rem 1.5rem;
@@ -293,7 +330,7 @@ main {
   width: 360px;
   max-width: 100%;
   border-radius: 20px;
-  box-shadow: 0 2px 16px rgba(44,44,80,0.10);
+  box-shadow: 0 2px 16px rgba(44, 44, 80, 0.10);
   object-fit: cover;
   display: block;
 }
@@ -308,12 +345,15 @@ main {
 
 
 .technologies-list {
-  padding: 0;     /* Bootstrap sets padding-left; override it */
-  margin: 0;           /* optional: also neutralize default margin */
-  list-style: none;    /* remove bullets at the UL level */
+  padding: 0;
+  /* Bootstrap sets padding-left; override it */
+  margin: 0;
+  /* optional: also neutralize default margin */
+  list-style: none;
+  /* remove bullets at the UL level */
 }
 
-.technologies-list li{
+.technologies-list li {
   display: inline-block;
   list-style: none;
   padding: 0.2rem;
@@ -321,7 +361,7 @@ main {
   border: 2px solid #c4aaff;
   border-radius: 10px;
   color: #c4aaff;
-  
+
 }
 
 /* Responsive for mobile */
@@ -329,10 +369,11 @@ main {
 /* Contact */
 
 
-#contact h1{
+#contact h1 {
   margin-bottom: 2rem;
 }
-.contact-container{
+
+.contact-container {
   padding: 2rem;
   background-color: rgba(231, 231, 231, 0.25);
   border-radius: 20px;
@@ -340,25 +381,27 @@ main {
   margin: 0 auto 3rem auto;
 
 }
-.contact-container a{
+
+.contact-container a {
   color: #62daff;
 }
-.contact-container a:hover{
-  color:#4da2bc
+
+.contact-container a:hover {
+  color: #4da2bc
 }
 
 
-.contact-form{
+.contact-form {
   display: flex;
   flex-direction: column;
-  gap:1rem;
+  gap: 1rem;
   margin-top: 2rem;
   /* center */
   width: 90%;
   margin: 0 auto;
 }
 
-.contact-input{
+.contact-input {
   background-color: rgb(242, 242, 248);
   border: none;
   padding: .25rem;
@@ -366,10 +409,11 @@ main {
   font-size: 1.25rem;
 }
 
-.contact-form img{
+.contact-form img {
   height: 30px;
 }
-.contact-form button{
+
+.contact-form button {
   width: 8rem;
   color: #F6F6F6;
   border: none;
@@ -379,45 +423,57 @@ main {
 }
 
 footer {
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
 }
 
 @media (max-width: 375px) {
-  /* set text size for  */
-  .hero-content p, #about p, .contact-container p, footer{
+
+  /* set overall text size  */
+  body {
     font-size: 1.2rem;
   }
+
   .project-info {
-  font-size: 1rem;
-}
+    font-size: 1rem;
+  }
+
   /* Hero Formatting */
-  .hero-content{
+  .hero-content {
     display: block;
   }
+
   .hero-text {
-  flex: 1;
-  min-width: auto; /* Ensures text section is not too narrow */
-}
-  
-  .hero-text h1 {
-  font-weight: 700;
-  font-size: 1.5em;
-}
-
-.hero-text h2 {
-  font-weight: 700;
-  font-size: 1.5em;
-}
-/* Reset project info */
-
-  
-}
-@media (max-width: 768px) {
-  .main-nav .nav-social, .main-nav .nav-links { /*Hide desktop navigation*/
-    display: none; /* Hide on mobile */
+    flex: 1;
+    min-width: auto;
+    /* Ensures text section is not too narrow */
   }
+
+  .hero-text h1 {
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+  .hero-text h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+  /* Reset project info */
+
+
+}
+
+@media (max-width: 768px) {
+
+  .main-nav .nav-social,
+  .main-nav .nav-links {
+    /*Hide desktop navigation*/
+    display: none;
+    /* Hide on mobile */
+  }
+
   /* .mobile-nav {
     display: flex;
     flex-direction: column;
@@ -444,15 +500,19 @@ footer {
   .nav-open-icon {
     display: block;
   }
+
   .nav-close-icon {
     display: block;
   }
+
   .nav-close-icon.hidden {
     display: none !important;
   }
+
   .nav-open-icon.hidden {
     display: none !important;
   }
+
   /*project boxes*/
   .project-box {
     flex-direction: column;
@@ -460,23 +520,28 @@ footer {
     padding: 1.5rem 1rem;
     gap: 1.5rem;
   }
+
   .project-image img {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
   }
+
   .project-info {
     padding-left: 0;
   }
 }
+
 @media (min-width: 1025px) {
   .nav-open-icon {
     display: none !important;
   }
+
   .nav-close-icon {
     display: none !important;
   }
-  .mobile-nav{
+
+  .mobile-nav {
     display: none !important;
   }
 
