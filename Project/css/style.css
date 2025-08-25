@@ -105,14 +105,19 @@ main {
   display: inline-block;   /* Make sure list items are inline */
 }
 /* Navigation link styles */
+.main-nav .nav-links li a{
+  padding: 6px 14px;
+}
+
 .nav-links li a{
   color: #F6F6F6;
   background: none;
   text-decoration: none;
   font-size: 1.1rem;
-  padding: 6px 14px;
   border-radius: 20px;
   transition: background 0.2s;
+  padding: .5rem;
+
 }
 
 /* Navigation link hover effect */
@@ -178,7 +183,9 @@ main {
 }
 
 .mobile-nav.open {
-  display: grid; 
+  display: flex; 
+  flex-flow: column nowrap;
+  justify-content: flex-start;
 }
 
 .mobile-nav .nav-links ul {
@@ -186,6 +193,9 @@ main {
   gap: 1rem; /* Space between links */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+}
+.mobile-nav .nav-social{
+  padding-left: .5rem;
 }
 /* Navigation toggle button for mobile */
 .nav-open-icon { /* Show this on mobile with a media query if needed */ 
@@ -405,9 +415,32 @@ footer {
   
 }
 @media (max-width: 768px) {
-  .main-nav .nav-social, .main-nav .nav-links { 
+  .main-nav .nav-social, .main-nav .nav-links { /*Hide desktop navigation*/
     display: none; /* Hide on mobile */
   }
+  /* .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  .mobile-nav .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .mobile-nav .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .mobile-nav .nav-social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  } */
   .nav-open-icon {
     display: block;
   }
