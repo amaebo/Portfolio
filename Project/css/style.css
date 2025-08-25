@@ -8,35 +8,35 @@
 
 @font-face {
   font-family: 'Stara';
-  src: url('../Static/fonts/Stara-Medium.ttf') format('truetype');
+  src: url('../Assets/fonts/Stara-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Stara';
-  src: url('../Static/fonts/Stara-Bold.ttf') format('truetype');
+  src: url('../Assets/fonts/Stara-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Stara';
-  src: url('../Static/fonts/Stara-Regular.ttf') format('truetype');
+  src: url('../Assets/fonts/Stara-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Stara';
-  src: url('../Static/fonts/Stara-Italic.ttf') format('truetype');
+  src: url('../Assets/fonts/Stara-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Stara';
-  src: url('../Static/fonts/Stara-BoldItalic.ttf') format('truetype');
+  src: url('../Assets/fonts/Stara-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
 }
