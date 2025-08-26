@@ -414,8 +414,6 @@ h6 {
 }
 
 footer {
-  color: white;
-  padding: 10px 0;
   text-align: center;
 }
 
@@ -431,14 +429,10 @@ footer {
     font-size: 1rem;
   }
 
-  /* Reset project info */
-
-
 }
 
-/* tablets */
-@media (max-width: 768px) {
-
+/* hide main nav and present hamburger nav */
+@media (max-width: 720px) {
   .main-nav .nav-social,
   .main-nav .nav-links {
     /*Hide desktop navigation*/
@@ -462,7 +456,10 @@ footer {
     display: none !important;
   }
 
+}
 
+/* tablets */
+@media (max-width: 768px) {
 
   /*project boxes*/
   .project-box {
