@@ -129,7 +129,7 @@ h6 {
   color: #eaeaea;
   background: none;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   border-radius: 20px;
   transition: background 0.2s;
   padding: .5rem;
@@ -289,7 +289,7 @@ h6 {
 /* 5. Image/Card */
 .hero-img {
   width: 100%;
-  max-width: 350px;
+  max-width: 390px;
   /* Maximum width */
   min-width: 180px;
   /* Minimum width */
@@ -335,7 +335,7 @@ h6 {
 .project-info {
   flex: 1;
   color: #eaeaea;
-  font-size: 1.12rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -380,6 +380,7 @@ h6 {
 
 .contact-container a {
   color: #62daff;
+  overflow-wrap: anywhere;
 }
 
 .contact-container a:hover {
@@ -393,7 +394,6 @@ h6 {
   gap: 1rem;
   margin-top: 2rem;
   /* center */
-  width: 90%;
   margin: 0 auto;
 }
 
@@ -424,18 +424,28 @@ footer {
 
 /* smartphones */
 @media (max-width: 425px) {
+
   /* smaller hero heading */
-  .hero-text h1{
+  .hero-text h1 {
     font-size: 2rem;
   }
+
   .hero-text h2 {
     font-size: 2.25rem;
   }
 
-/* smaller text  */
- #hero p, #about p, #contact p, footer{
-  font-size: 1.2rem;
- }
+  /* smaller text  */
+  #hero p,
+  #about p,
+  #contact p,
+  footer {
+    font-size: 1.2rem;
+  }
+
+  /* smaller project info textt */
+  .project-info {
+    font-size: 1rem;
+  }
 
 }
 
@@ -509,6 +519,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
   }
 
   /* Two-column Layout */
@@ -516,10 +527,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: left;
     /* Add this to center children horizontally */
     gap: 6rem;
     width: 100%;
     flex-wrap: wrap;
+    margin: auto auto;
   }
 
   /* 4. Text Section */
@@ -531,12 +544,12 @@ footer {
 
   .hero-text h1 {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero-text h2 {
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .hero-text p {
@@ -545,23 +558,19 @@ footer {
 
 }
 
-/* Hero Formatting small screens 
-    .hero-content {
-      display: block;
-    }
-  
-    .hero-text {
-      flex: 1;
-      min-width: auto;
-      /* Ensures text section is not too narrow 
-    }
-  
-    .hero-text h1 {
-      font-weight: 700;
-      font-size: 1.5em;
-    }
-  
-    .hero-text h2 {
-      font-weight: 700;
-      font-size: 1.5em;
-    } */
+@media (min-width: 1440px) {
+  .hero-text h1 {
+    font-weight: 700;
+    font-size: 2.75rem;
+  }
+
+  .hero-text h2 {
+    font-weight: 700;
+    font-size: 3.75rem;
+  }
+
+  .hero-text p {
+    font-size: 1.75rem;
+  }
+
+}
