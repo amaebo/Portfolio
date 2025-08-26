@@ -239,38 +239,30 @@ h6 {
 /* --------Hero Section Styling----- */
 /* Hero Styling Bigger Sreens */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   height: 100vh;
+  margin-top: 75px;
 }
 
 /* Two-column Layout */
 .hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Add this to center children horizontally */
-  gap: 6rem;
-  width: 100%;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 /* 4. Text Section */
 .hero-text {
-  flex: 1;
-  min-width: 350px;
+  margin-bottom: 30px;
   /* Ensures text section is not too narrow */
 }
 
 .hero-text h1 {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 
 .hero-text h2 {
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 2.75rem;
 }
 
 .hero-text p {
@@ -291,7 +283,7 @@ h6 {
 /* 5. Image/Card */
 .hero-img {
   width: 100%;
-  max-width: 450px;
+  max-width: 350px;
   /* Maximum width */
   min-width: 180px;
   /* Minimum width */
@@ -506,13 +498,43 @@ footer {
     display: none !important;
   }
 
-  .hero-text {
-    background: #4da2bc;
-    flex: 3 1;
+  /* hero content */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .hero-img {
-    flex: 1 1;
+  /* Two-column Layout */
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Add this to center children horizontally */
+    gap: 6rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  /* 4. Text Section */
+  .hero-text {
+    flex: 1;
+    min-width: 350px;
+    /* Ensures text section is not too narrow */
+  }
+
+  .hero-text h1 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+
+  .hero-text h2 {
+    font-weight: 700;
+    font-size: 4rem;
+  }
+
+  .hero-text p {
+    font-size: 1.5rem;
   }
 
 }
