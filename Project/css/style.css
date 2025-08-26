@@ -237,13 +237,12 @@ h6 {
 }
 
 /* --------Hero Section Styling----- */
+/* Hero Styling Bigger Sreens */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  /* margin-top: 5rem;
-  margin-bottom: 8rem; */
 }
 
 /* Two-column Layout */
@@ -428,6 +427,7 @@ footer {
   text-align: center;
 }
 
+/* smartphones */
 @media (max-width: 375px) {
 
   /* set overall text size  */
@@ -439,32 +439,12 @@ footer {
     font-size: 1rem;
   }
 
-  /* Hero Formatting */
-  .hero-content {
-    display: block;
-  }
-
-  .hero-text {
-    flex: 1;
-    min-width: auto;
-    /* Ensures text section is not too narrow */
-  }
-
-  .hero-text h1 {
-    font-weight: 700;
-    font-size: 1.5em;
-  }
-
-  .hero-text h2 {
-    font-weight: 700;
-    font-size: 1.5em;
-  }
-
   /* Reset project info */
 
 
 }
 
+/* tablets */
 @media (max-width: 768px) {
 
   .main-nav .nav-social,
@@ -490,6 +470,8 @@ footer {
     display: none !important;
   }
 
+
+
   /*project boxes*/
   .project-box {
     flex-direction: column;
@@ -509,7 +491,9 @@ footer {
   }
 }
 
-@media (min-width: 1025px) {
+
+/* larger screens */
+@media (min-width: 1024px) {
   .nav-open-icon {
     display: none !important;
   }
@@ -522,4 +506,34 @@ footer {
     display: none !important;
   }
 
+  .hero-text {
+    background: #4da2bc;
+    flex: 3 1;
+  }
+
+  .hero-img {
+    flex: 1 1;
+  }
+
 }
+
+/* Hero Formatting small screens 
+    .hero-content {
+      display: block;
+    }
+  
+    .hero-text {
+      flex: 1;
+      min-width: auto;
+      /* Ensures text section is not too narrow 
+    }
+  
+    .hero-text h1 {
+      font-weight: 700;
+      font-size: 1.5em;
+    }
+  
+    .hero-text h2 {
+      font-weight: 700;
+      font-size: 1.5em;
+    } */
