@@ -61,7 +61,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(#636DB5, #1c1f36);
-  color: #F6F6F6;
+  color: #eaeaea;
 }
 
 h1,
@@ -73,6 +73,12 @@ h6 {
   font-family: 'Stara', sans-serif;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+#about h1,
+#projects h1,
+#contact h1 {
+  font-size: 2.25rem;
 }
 
 /* ------------Navigation Styling --------------------*/
@@ -120,7 +126,7 @@ h6 {
 }
 
 .nav-links li a {
-  color: #F6F6F6;
+  color: #eaeaea;
   background: none;
   text-decoration: none;
   font-size: 1.1rem;
@@ -145,13 +151,13 @@ h6 {
 
 /* Social icon SVG color */
 .nav-social a {
-  color: #F6F6F6;
+  color: #eaeaea;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .nav-social svg {
-  fill: #F6F6F6;
+  fill: #eaeaea;
   width: 1em;
   height: 1em;
   vertical-align: middle;
@@ -331,7 +337,6 @@ h6 {
   color: #eaeaea;
   font-size: 1.12rem;
   margin-bottom: 1rem;
-  color: #eaeaea;
 }
 
 
@@ -406,7 +411,7 @@ h6 {
 
 .contact-form button {
   width: 8rem;
-  color: #F6F6F6;
+  color: #eaeaea;
   border: none;
   background-color: rgb(99 109 181);
   border-radius: 20px;
@@ -418,21 +423,25 @@ footer {
 }
 
 /* smartphones */
-@media (max-width: 375px) {
-
-  /* set overall text size  */
-  body {
-    font-size: 1.2rem;
+@media (max-width: 425px) {
+  /* smaller hero heading */
+  .hero-text h1{
+    font-size: 2rem;
+  }
+  .hero-text h2 {
+    font-size: 2.25rem;
   }
 
-  .project-info {
-    font-size: 1rem;
-  }
+/* smaller text  */
+ #hero p, #about p, #contact p, footer{
+  font-size: 1.2rem;
+ }
 
 }
 
 /* hide main nav and present hamburger nav */
 @media (max-width: 720px) {
+
   .main-nav .nav-social,
   .main-nav .nav-links {
     /*Hide desktop navigation*/
