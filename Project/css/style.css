@@ -425,7 +425,8 @@ footer {
 /*----------Animations -----------------------*/
 
 .fade-up,
-.fade-left {
+.fade-left,
+.fade-right {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -440,9 +441,15 @@ footer {
   opacity: 0;
 }
 
+.fade-right.hidden{
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
 /* Reveal State */
 .fade-up.show,
-.fade-left.show {
+.fade-left.show,
+.fade-right.show {
   transform: translate(0);
   opacity: 1;
 }
