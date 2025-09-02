@@ -6,6 +6,7 @@ const navitems = document.getElementsByClassName("nav-links");
 const navlinks = document.querySelectorAll(".nav-links li"); // returns a node list of li links
 
 
+// ------------ Mobile Nav Functionality --------------------
 function toggleNavIcons(isMenuOpen) {
   if (isMenuOpen) {
     // show close icon
@@ -23,13 +24,13 @@ navOpenIcon.addEventListener('click', () => {
   toggleNavIcons(true);
 });
 
-//if close icon clicked, close mobile nav functionality 
+// if close icon clicked, close mobile nav functionality 
 navCloseIcon.addEventListener('click', () => {
   mobileNav.classList.remove('open');
   toggleNavIcons(false);
 });
 
-//if nav link clicked, close mobile navfunctionality 
+//if nav link clicked, close mobile nav functionality 
 navlinks.forEach(link => {
   link.addEventListener('click', () => {
     mobileNav.classList.remove('open');
@@ -50,3 +51,24 @@ document.addEventListener('click', (event) => {
     }
   }
 });
+
+//--------------- Fade-up and Fade-right Animations w/ Scroll trigger--------------
+const animateElements = document.querySelectorAll('.fade-up, .fade-left');
+
+const options = {
+  root: null, //viewport is root element
+  threshold: 0.2,
+}
+
+// set up intersection observer API
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('hidden')
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // only animate once
+    }
+  });
+}, options);
+
+animateElements.forEach(el => observer.observe(el));
