@@ -22,13 +22,6 @@
 
 @font-face {
   font-family: 'Stara';
-  src: url('../Assets/fonts/Stara-Black.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Stara';
   src: url('../Assets/fonts/Stara-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
@@ -441,7 +434,7 @@ footer {
   opacity: 0;
 }
 
-.fade-right.hidden{
+.fade-right.hidden {
   transform: translateX(-40px);
   opacity: 0;
 }
