@@ -1,13 +1,13 @@
 // Show mobile nav only when clicked on
 const mobileNav = document.getElementById("mobile-nav");
-const navOpenIcon= document.getElementById('nav-open-icon')
+const navOpenIcon = document.getElementById('nav-open-icon')
 const navCloseIcon = document.getElementById("nav-close-icon");
 const navitems = document.getElementsByClassName("nav-links");
 const navlinks = document.querySelectorAll(".nav-links li"); // returns a node list of li links
 
 
 function toggleNavIcons(isMenuOpen) {
-  if (isMenuOpen){
+  if (isMenuOpen) {
     // show close icon
     navOpenIcon.classList.add('hidden');
     navCloseIcon.classList.remove('hidden');
@@ -17,22 +17,36 @@ function toggleNavIcons(isMenuOpen) {
     navCloseIcon.classList.add('hidden');
   }
 }
-//open mobile nav functionality
+//if open icon clicked, open mobile nav functionality
 navOpenIcon.addEventListener('click', () => {
   mobileNav.classList.add('open');
   toggleNavIcons(true);
 });
 
-//close mobile nav functionality 
+//if close icon clicked, close mobile nav functionality 
 navCloseIcon.addEventListener('click', () => {
   mobileNav.classList.remove('open');
   toggleNavIcons(false);
 });
 
-//moblie nav list item click functionality 
+//if nav link clicked, close mobile navfunctionality 
 navlinks.forEach(link => {
   link.addEventListener('click', () => {
     mobileNav.classList.remove('open');
     toggleNavIcons(false);
   });
+});
+
+//Close menu when clicking outside of nav
+document.addEventListener('click', (event) => {
+  const clickedInsideNav = mobileNav.contains(event.target);
+  const clickedNavOpenIcon = navOpenIcon.contains(event.target);
+  const clickedNavCloseIcon = navCloseIcon.contains(event.target);
+
+  if (!clickedInsideNav && !clickedNavOpenIcon && !clickedNavCloseIcon) {
+    if (mobileNav.classList.contains('open')) {
+      mobileNav.classList.remove('open');
+      toggleNavIcons(false);
+    }
+  }
 });
