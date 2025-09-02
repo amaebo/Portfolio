@@ -57,7 +57,7 @@ const animateElements = document.querySelectorAll('.fade-up, .fade-left, .fade-r
 
 const options = {
   root: null, //viewport is root element
-  threshold: 0.5,
+  threshold: 0.45,
 }
 
 // set up intersection observer API
