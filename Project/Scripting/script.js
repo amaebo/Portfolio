@@ -53,11 +53,11 @@ document.addEventListener('click', (event) => {
 });
 
 //--------------- Fade-up and Fade-right Animations w/ Scroll trigger--------------
-const animateElements = document.querySelectorAll('.fade-up, .fade-left');
+const animateElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
 
 const options = {
   root: null, //viewport is root element
-  threshold: 0.2,
+  threshold: 0.5,
 }
 
 // set up intersection observer API
