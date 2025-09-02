@@ -425,7 +425,7 @@ footer {
 /*----------Animations -----------------------*/
 
 .fade-up,
-.fade-right {
+.fade-left {
   transition: all 0.6s ease-out;
 }
 
@@ -435,17 +435,18 @@ footer {
   opacity: 0;
 }
 
-.fade-right.hidden {
-  transform: translateX(-40px);
+.fade-left.hidden {
+  transform: translateX(40px);
   opacity: 0;
 }
 
 /* Reveal State */
 .fade-up.show,
-.fade-right.show {
+.fade-left.show {
   transform: translate(0);
   opacity: 1;
 }
+
 /* .delay-1{
   transition-delay: .5s;
 }
