@@ -52,11 +52,12 @@ document.addEventListener('click', (event) => {
   }
 });
 
-//--------------- Fade-up and Fade-right Animations w/ Scroll trigger--------------
+//--------------- Fade-in Animations w/ Scroll trigger--------------
+// Using Intersectioin Observer API/Object
 const animateElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
 
 const options = {
-  root: null, //viewport is root element
+  root: null, //viewport is root element (what were setting the intersector to be)
   threshold: 0.45,
 }
 
@@ -71,4 +72,5 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, options);
 
+// calle observer for each element
 animateElements.forEach(el => observer.observe(el));
