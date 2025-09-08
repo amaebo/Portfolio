@@ -161,7 +161,7 @@ h6 {
 
 .nav-social a:hover svg path,
 .nav-social a:hover svg g {
-  animation: draw 15s linear forwards;
+  animation: draw 12s linear forwards;
   /* one-shot; stays at final frame on hover */
 }
 
