@@ -57,8 +57,8 @@ body {
   width: 90vw;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(#636DB5, #1c1f36);
   color: #eaeaea;
+  background: none; /* Remove background from body */
 }
 
 h1,
